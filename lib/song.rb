@@ -55,8 +55,8 @@ class Song
       song
   end
 
-  def self.create_from_filename(song_file)
-    self.new_from_filename
+  def self.create_from_filename(filename)
+    self.all.create{|song| song.name == name}
   end
 
 def self.destroy_all
